@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    left: 50%;
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.scene{
+    
+    color:#ffffff ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height:219px;
+    margin-top: 10px;
+    /* padding: 15px 35px 5px 35px; */
+    
+    margin-bottom: 20px;
+
+
+}
+.scene .card{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    transition: transform 600ms ease;
+    transform-style: preserve-3d;
+  
+}
+.card__face{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* transform-style: preserve-3d; */
+    transition: transform 500s;
+
+    
+
+
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    color: #000000  ;
+    border-radius: 10px; 
+}
+ .front{
+    transition: transform 300ms ease-in-out;
+    padding: 15px 35px 5px 35px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    background-image: linear-gradient(to right, red , yellow); 
+ }
+
+ 
+
+.back{
+    background-image: linear-gradient(to right, yellow , red); 
+  
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform 300ms ease-in-out;
+    padding: 10px 0 5px 0;
+    &::before{
+        content: "";
+        filter: blur();
+        opacity: 0.15;
+    }
+    
+    
+
+}
+.card:hover .front{
+    transform: rotateY(180deg); 
+}
+.card:hover .back{
+transform: none;
+}
+.front .cardHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+    font-weight: 700;
+
+}
+.front .cardIcon{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0 15px 0;
+}
+.front .cardIcon img{
+
+    width: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.front .cardNumber{
+    color: gold;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 0 5px 0;
+    font-size: 25px;
+    
+}
+.front .cardDate{
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    padding-left: 10px;
+  
+}
+.expMonth,
+.expYear{
+
+    color: #ffd70f;
+    padding-left:5px ;
+    font-weight: 600;
+
+
+}
+
+.front .cardDetails{
+
+    display: flex;
+    padding:10px 5px 0 0;
+    gap: 10px;
+    color: gold;
+    justify-content: space-between;
+   
+    
+}
+.front .cardDetails .name{
+font-size: 15px;
+text-transform: uppercase;
+}
+
+
+.front .logo{
+    width: 25px;
+    margin-bottom:-20px;
+   
+}
+
+.back .cardHeader{
+    font-size: 7px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+.back .magnetic_stripe{
+    background-color: #000000;
+    width: 100%;
+    height: 30px;
+    margin: 3px 0 3px 0;
+}
+.back .midpoint{
+    font-size: 8px;
+    font-weight: 700;
+    padding: 10px 5px;
+    display:flex ;
+    justify-content: space-between;
+
+}
+.signature_box{
+    width:100%;
+    background-color: #8a97a0;
+    height: 20px;
+    padding:0 5px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    padding: 7px;
+    font-size: 10px;
+    margin-bottom: 5px;
+ 
+}
+.signature{
+    padding-left: 30px;
+   
+}
+.midpoint .text{
+    font-size: 6px;
+    color: #000000;
+    font-weight: lighter;
+
+}
+.bottom_section{
+    font-size: 10px;
+    display:inline-flex;
+    justify-content: space-between;
+    padding:5px 10px;
+    font-weight: 700;
+}
+
+.security_hologram{
+    
+width: 30%;
+padding-top: 40px;
+padding-left: 4px;
+}
+.bottom_section .instructions{
+    font-size: 7px;
+    padding:25px 0px 0 10px;
+}
+.form{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius:8px ;
+    margin-bottom: 10px;
+}
+input[type="radio"] {
+  margin: 0 4px 8px 0;
+}
+.form .card_type{
+    padding: 10px;
+
+}
+.cusomer-details input{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color:#8a97a0;
+    box-shadow: 0 1px 0    rgba(0,0,0,0.03) inset;
+    margin-bottom: 15px;
+    border-radius:4px ;
+
+
+}
+input:focus{
+    border: #3ac162 solid 1px;
+    color: #000000;
+   
+}
+.date_cvv{
+    display: flex;
+    padding: 6px;
+    gap: 10px;
+}
+
+.customer-details label{
+    font-size: 14px;
+    font-weight: 700;
+    color: #8a97a0;
+}
+.form button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  button:hover{
+ background-color:#00FF00;
+  }
+
+
+  @media screen and (min-width: 480px) {
+    .scene{
+        max-width: 480px;
+    }
+
+    form {
+      max-width: 480px;
+    }
+  
+  }

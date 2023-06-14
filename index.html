@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterCard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scene">
+            <div class="card">
+                <div class="card__face">
+
+                    <div class="front">
+                        <div class="cardHeader">
+
+                            <p class="card-type">debit</p>
+                            <span>MasterCard</span>
+                        </div>
+            
+            
+                        <div class="cardIcon">
+                            <img src="./images/chip.png" alt="Card chip" class="chipIcon" width="20px"/>
+                            <img src="./images/contactless.png" alt="Contactless icon" width="30px" height="30px" class="contactIcon"/>
+                        </div>
+                        <p class="cardNumber">5196 <span></span> 0101 <span></span> 0000 <span></span>0000</p>
+            
+                        <div class="cardDate">
+                            <p> Valid <br/>Until<span class="expMonth" ></span> /  <span class="expYear"></span></p> 
+                            
+                           
+                        </div>
+                        <div class="cardDetails">
+                            <div>
+                                <p class="name">ONESMUS KIRIMI</p>
+                            </div>
+            
+                            <div class="logo">
+                                <img src="./images/mastercard-logo.png" alt="Mastercard icon" class="mastercard-icon" width="50px"/>
+                            </div>
+                       
+                        </div>
+                    </div>
+                    <div class="back">
+                        
+                            <div class="cardHeader">
+                                 <p>THIS CARD ISS ISSUED BY MASTERCARD LTD PURSUANT TO LICENSE BY Mastercard ASIA/PACIFIC PTE.LTD.</p>
+                                 <p class="magnetic_stripe"></p>
+                             </div>
+                             <div class="midpoint">
+                                 <div >
+                                     <p>AUTHORISED SIGNATURE-NOT VALID UNLESS SIGNED</p>
+                                     <p class="signature_box"> <span class="signature"></span><span class="cvv_number">237</span></p>
+                                     <p>For Customer service, please call +254 710 000 000</p>
+                                 </div>
+                                 <p class="text">TOPPAN GRAVITY-UAE-592020-01/23</p>
+                             </div>
+                             <div class="bottom_section">
+                                 <div class="security_hologram">
+                                    <img src="./images/shield .png" width="45px" height="45px"/>
+                                 </div>
+                                 <div class="instructions">
+                                     <p>This card is for use only by the cardholder in accordance with the curent conditions of use.
+                                         <br/>This card is valid only if the expiry date is current and has not been alterd in any way and conforms to all technical requirements.
+                                         <br/>Use your card to pay for goods and services at ourlets displaying the Mastercard sign.
+                                         <br/>This card is the property of Mastercard Ltd. If found please hand it in at any Mastercard branch office or send to Mastercaerd offices.
+                                     </p>
+                                 </div>
+                             </div>
+                         
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            
+            
+        </div>
+        <div class="registerForm">
+            <form class="form">
+                <div class="card_type">
+                    <label>Card Type:</label>
+                    <input type="radio"  value="credit" name="card_type" class="credit"><label for="credit">Credit</label>
+                    <input type="radio"  value="debit" name="card_type" class="debit"><label for="debit">Debit</label>
+                </div>
+                <div class="cusomer-details">
+                    <label>Card Number: </label>
+                    <input type="text" placeholder="5196 0101 0000 0000" maxlength="20" minlength="12" class="cardNumber_Input" autocomplete="off" required/> 
+                    <label>Holders' Name:</label>
+                    <input type="text" placeholder="ONESMUS KIRMI" class="cardHolder_input" required autocomplete="off"/>
+                    <div class="date_cvv">
+                        <label>Expiry Date: </label>
+                        <input type="text" placeholder="Month" required maxlength="2"class="monthInput"/>
+                        <span></span>
+                         <input type="text" placeholder="Year"  required maxlength="2"class="yearInput"/>
+                        <label>CVV Number: </label>
+                        <input type="text" maxlength="4" placeholder="cvv" class="cvv_input" required autocomplete="off"    />
+    
+                    </div>
+
+                </div>
+
+                <button type="submit">Submit Payment</button>
+    
+            </form>
+
+        </div>
+        <script src="./index.js"></script>
+    
+</body>
+</html>
